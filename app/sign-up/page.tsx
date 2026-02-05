@@ -1,4 +1,4 @@
-import { SignUpView } from '@/lib/modules/ui/view/sign-up-view'
+import { SignUpView } from '@/lib/modules/ui/auth/view/sign-up-view'
 
 const page = () => {
   return <SignUpView/>

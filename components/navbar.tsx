@@ -14,7 +14,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { GeneratedAvatar } from "./generated-avatr";
 import { CreditCardIcon, LayoutDashboard } from "lucide-react";
-import { SignOutView } from "@/lib/modules/ui/view/sign-out-view";
+import { SignOutView } from "@/lib/modules/ui/auth/view/sign-out-view";
 
 export const Navbar = () => {
   const { data: session } = useSession();
@@ -23,14 +23,14 @@ export const Navbar = () => {
   return (
     <nav className="border-b border-gray-200 bg-white">
       <div className="container max-w-6xl mx-auto h-16 flex items-center justify-between px-8">
-        <Link href={"/"} className="flex items-center gap-4 ">
+        <Link href={"/"} className="flex items-center gap-4">
           <Image
             src={"/logo.svg"}
             alt="profile picture"
             width={36}
             height={36}
           />
-          <span className="text-2xl font-bold ">Task Flow</span>
+          <span className="text-2xl font-bold ">Task<span className="text-primary">Flow</span></span>
         </Link>
         {session?.user ? (
           <DropdownMenu>
